@@ -1,4 +1,3 @@
-import '@rocktimsaikia/github-card'
 import Home from './Home'
 import Projects from './Projects'
 import Resume from './Resume'
