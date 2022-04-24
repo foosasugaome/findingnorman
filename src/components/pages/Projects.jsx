@@ -10,12 +10,12 @@ export default function Projects () {
           <a href='https://expressfinance.herokuapp.com/'>Express Finance</a>
         </p>
         <p>
-          <a href='https://preeminent-cobbler-237db0.netlify.app/'>
+          <a href='https://katims.netlify.app'>
             KAT Inventory
           </a>
         </p>
         <p>
-          <a href='https://boisterous-crostata-b66bd1.netlify.app/'>
+          <a href='https://lookingforgroup.netlify.app/'>
             Looking for Group
           </a>
         </p>
