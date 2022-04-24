@@ -1,6 +1,4 @@
-// import { useEffect } from "react";
 import '@rocktimsaikia/github-card'
-import { useParams } from 'react-router-dom'
 import Home from './Home'
 import Projects from './Projects'
 import Resume from './Resume'
