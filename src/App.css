@@ -59,7 +59,7 @@ a:hover, a:focus {
   width: 80px;
   height: 80px;
   color: var(--platinum);
-  background-color: var(--granite);
+  background-color: var(--manatee);
   border-radius: 40px;  
   font-size: 60px;
   font-weight: var(--bold);
@@ -67,7 +67,11 @@ a:hover, a:focus {
   padding-top: 17px;
   margin: 20px 10px 20px 20px;
   overflow: hidden;
-  border: 0;
+  border: 0;  
+  width: fit-content;
+}
+.logo::before{
+  content: "finding norman";
 }
 .expandable {  
   overflow: hidden;
@@ -98,7 +102,10 @@ a:hover, a:focus {
   max-width: 1000px;
   min-width: 400px;  
 }
-
+.flex-container-row img {
+  margin: 10px;
+  width: 25px;
+}
 .max-width {
   border-bottom: .05rem solid var(--manatee);
   width: 100%;
@@ -144,9 +151,19 @@ a:hover, a:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }  
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;    
+    border-radius: 30px;
+  }
+  .logo::before{
+    content: "fn";
   }
 }
-
 .github-card {
   display: flex;  
   align-items: center;
