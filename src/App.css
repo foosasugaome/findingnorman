@@ -55,6 +55,7 @@ main {
   max-width: 1000px;
   min-width: 400px;
   height: 100vh;   
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -101,7 +102,14 @@ a:hover, a:focus {
   justify-content: flex-start;
   flex-direction: row;    
   width: 96%;  
-  gap:20px;  
+  gap:20px;    
+}
+.flex-container-project::-webkit-scrollbar {
+  display: none;
+}
+.flex-container-project{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .card-project {
   width: 90%;
