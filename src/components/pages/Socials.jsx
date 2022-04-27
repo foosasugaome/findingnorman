@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 // import moment from 'moment'
 
@@ -12,12 +13,25 @@ export default function Socials () {
 
   useEffect(() => {
     fetchData()
+  
+    // const script = document.createElement('script');
+    // script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    // script.async = true;
+    // script.defer = true;
+
+    // document.body.appendChild(script);
+
+    // return () => {
+    //   document.body.removeChild(script);
+    // };    
   }, [])
 
   return (
-    <>
-      <div className='expandable' id='socials'>        
-        {/* <div
+    <>    
+      <motion.div initial={{ x: '100vw'}} animate={{ x:0 }} transition={{ type: 'spring', delay: 0, duration: 0.8}}>
+
+        {/* start of linkedin badge */}
+        <div
           className='badge-base LI-profile-badge'
           data-locale='en_US'
           data-size='large'
@@ -25,8 +39,10 @@ export default function Socials () {
           data-type='HORIZONTAL'
           data-vanity='normanteodoro'
           data-version='v1'
-        ></div> */}
+        ></div>
+        {/* end of linkedin badge */}
 
+        {/* start of github card */}
         <div className='github-card center'>
           <div className='card-cover center'>
             <div className='social-logo'>
@@ -38,6 +54,7 @@ export default function Socials () {
               </a>
             </div>
           </div>
+
 
           <div className='info-text center'>
             <p className='name'>{githubData.name}</p>
@@ -62,23 +79,10 @@ export default function Socials () {
               <p className='subtext'>Repositories</p>
               <p className='score'>{githubData.public_repos}</p>
             </div>
-          </div>
-          {/* <div className='card-text-container'>
-            <div className='center'>
-              <p className='subtext'>Joined :</p>
-              <p className='subtext'>
-                {moment(githubData.created_at).format('DD MMM yyyy')}
-              </p>
-            </div>
-            <div className='center'>
-              <p className='subtext'>Last update :</p>
-              <p className='subtext'>
-                {moment(githubData.updated_at).format('DD MMM yyyy')}
-              </p>
-            </div>
-          </div> */}
+          </div>        
         </div>
-      </div>
+          {/* end of github card */}
+      </motion.div>      
     </>
   )
 }

@@ -1,25 +1,32 @@
+import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 export default function Projects () {
+  const [githubData, setGithubData] = useState([])
+
+  const fetchData = () => {
+    return fetch(`https://api.github.com/users/foosasugaome/starred?sort:updated`)
+      .then(response => response.json())
+      .then(data => setGithubData(data))
+  }
+
+  useEffect(() => {
+    fetchData()      
+  }, [])
+  const listRepos = githubData.map((e, idx) => {    
+      return (
+        <>
+        <p>
+        <a href={e.homepage} target='_blank' rel='noreferrer'> {e.description} </a> ( <a href={e.html_url} target='_blank' rel='noreferrer'>Github</a> )
+        </p>
+        </>
+      )
+  })      
   return (
     <>
-      <div className='expandable' id='projects'>
+      <motion.div initial={{ x: '100vw'}} animate={{ x:0 }} transition={{ type: 'spring', delay: 0, duration: 0.8}}>
         <h2>Projects</h2>
-        <p>
-          <a href='https://foosasugaome.github.io/candy_hunt/' target='_blank' rel='noreferrer'>Arcade Game</a>
-        </p>
-        <p>
-          <a href='https://expressfinance.herokuapp.com/' target='_blank' rel='noreferrer'>Express Finance</a>
-        </p>
-        <p>
-          <a href='https://katims.netlify.app' target='_blank' rel='noreferrer'>
-            KAT Inventory
-          </a>
-        </p>
-        <p>
-          <a href='https://lookingforgroup.netlify.app/' target='_blank' rel='noreferrer'>
-            Looking for Group
-          </a>
-        </p>
-      </div>
+        {listRepos}
+      </motion.div>
     </>
   )
 }

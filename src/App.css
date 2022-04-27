@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;0,700;1,300&display=swap');
 :root {
   --black:#000000;
+  --dgranite:#262626;  
   --granite:#66666E;  
   --manatee: #9999A1;
   --platinum: #E6E6E9;
@@ -11,15 +13,19 @@
   /* font: font-style font-variant font-weight font-size/line-height font-family; */
   /* sample : font: italic small-caps normal 13px/150% Arial, Helvetica, sans-serif; */
   --thin: 100;
-  --regular: 400;   
+  --regular: 300;   
   --bold: 700;    
+  --rubik : 'Rubik', sans-serif;
 }
 * {
-  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  font-family: 'Rubik', sans-serif;
   font-weight: var(--regular);   
   box-sizing: border-box;        
-  color: var(--granite);
+  color: var(--granite);  
+  background-color: var(--cultured);
 }
+
 .App {
   text-align: center;
 }
@@ -32,14 +38,14 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
-  height: 120px;
-  background-color: var(--cultured);
+  height: 80px;
+  background-color: var(--dgranite);
   width: 100vw;
-  min-width: 400px;      
+  min-width: 400px;        
 }
 main {
   position: fixed;
-  top: 130px;
+  top: 100px;
   left: 50%;
   transform: translate(-50%, 0); 
   margin: 0 10px 0 10px;
@@ -47,36 +53,22 @@ main {
   width: 100vw;
   max-width: 1000px;
   min-width: 400px;
+  height: 100%;  
 }
 a {
   text-decoration: none;
   color: var(--granite);
+  font-weight: var(--regular);
 }
 a:hover, a:focus {
   background-color: var(--cultured);      
+  font-weight: var(--regular);
 }
-.logo {
-  width: 80px;
-  height: 80px;
-  color: var(--platinum);
-  background-color: var(--manatee);
-  border-radius: 40px;  
-  font-size: 60px;
-  font-weight: var(--bold);
-  padding-left: 3px;
-  padding-top: 17px;
-  margin: 20px 10px 20px 20px;
-  overflow: hidden;
-  border: 0;  
-  width: fit-content;
-}
-.logo::before{
-  content: "finding norman";
-}
+
 .expandable {  
   overflow: hidden;
   color: var(--granite);        
-  transition: all .1s ease-in-out;  
+  transition: all .5s ease-in-out;  
   width: 0;
   height: 0;     
   text-align: left;
@@ -100,7 +92,36 @@ a:hover, a:focus {
   padding: 0 20px 0 20px;
   width: 100vw;
   max-width: 1000px;
-  min-width: 400px;  
+  min-width: 400px;    
+}
+.flex-container-icons {
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  align-items: flex-start;  
+  align-content: flex-start;
+  /* padding: 0 20px 0 20px; */
+  width: 50%;
+  max-width: 1000px;
+  min-width: 400px; 
+  height: 100%;
+  margin-bottom: 200px;
+}
+.flex-container-icons img {
+  width: 5vw;
+}
+.flex-container-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;  
+  align-items: baseline;  
+  padding: 0 20px 0 0px;
+  width: 100vw;
+  max-width: 1000px;
+  min-width: 400px; 
+  height: 80px;  
+  background-color: var(--dgranite); 
 }
 .flex-container-row img {
   margin: 10px;
@@ -117,68 +138,68 @@ a:hover, a:focus {
   gap: 10px;
   align-items: baseline;   
   color: var(--granite);
+  background-color: var(--dgranite);
 }
 .menu-items a {
   text-decoration: none;
-  color: var(--granite);
+  color: var(--cultured);
+  background-color: var(--dgranite);
 }
-.menu-items a:hover, a:focus {
-  background-color: var(--cultured);    
-  border-bottom: 5px solid orangered;  
+.menu-items a:hover, a:focus {  
+  text-shadow: 0 0 10px var(--cultured);
 }
-.menu-items a:visited:active {
-  border-bottom: 5px solid orangered;  
+.menu-items a:visited:active {  
+  background-color: var(--dgranite);
+}
+.selected {
+  text-shadow: 0 0 10px var(--cultured);
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  /* color: var(--platinum);
+  background-color: var(--manatee);
+  border-radius: 40px;   */
+  color: var(--cultured);
+  /* background-color: var(--manatee); */
+  /* border-radius: 40px;   */
+  font-size: 30px;  
+  padding-top: 45px;
+  margin: 0px 10px 0px 20px;  
+  overflow: hidden;
+  border: 0;  
+  width: fit-content;
+  background-color: var(--dgranite);  
+}
+.logo::before{
+  content: "findingnorman";
+  white-space: pre-wrap;
+}
+.aboutme {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: justify;
+  padding: 0 10px 0 0;
+  white-space: inherit;
 }
 
-@media screen and (max-width: 400px) {
-  .menu-items {visibility: hidden;}      
-}
-@media screen and (max-width: 600px) {
-  .menu-items {    
-    font-size: 14px;
-    font-weight: var(--regular);    
-  }  
-  main {    
-    font-size: 14px;
-    font-weight: var(--regular);        
-  }  
-  .logo {
-    height: 60px;
-    width: 60px;
-    font-size: 40px;    
-  }
-  .expandable {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }  
-}
-@media screen and (max-width: 800px) {
-  .logo {
-    height: 60px;
-    width: 60px;
-    font-size: 40px;    
-    border-radius: 30px;
-  }
-  .logo::before{
-    content: "fn";
-  }
-}
 .github-card {
   display: flex;  
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: 350px;  
+  width: 330px;  
   height: 400px;
-  box-shadow: 0 4px 8px 0 var(--granite);
-  transition: 0.3s; 
+  box-shadow: 0 1px 8px 0 var(--manatee);
+  transition: 0.3s;   
+  border-radius: 5px;
 }
 .card-cover {
   width: 100%;  
   text-align: center;  
   background-color: orangered;
   padding: 20px;  
+  border-radius: 5px 5px 0px 0px;
 }
 .card-text-container {
   width: 100%;
@@ -220,14 +241,17 @@ img {
   height: 20px;  
   position: relative;
   top: 0;
-  right: 0;  
+  right: 0;    
+}
+.social-logo img {
+  background: transparent;
 }
 iframe {
   border: 0;
   width:100%;
-  height:100%;   
-  overflow: hidden;
-  scrollbar-width: .05rem;
+  height:2000px;
+  overflow-y: scroll;  
+  /* overflow: hidden; */
 }
 iframe::-webkit-scrollbar{
   display: none;
@@ -238,5 +262,100 @@ iframe {
 }
 .home {
   position: relative;  
-  z-index: -1;
+  z-index: 0;
+  width: 60%;  
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+.bigpicture {  
+  padding: 0;
+  position: absolute;  
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  max-width: 600px;  
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+}
+.bigpicture img {
+  width: 100%;
+  background: transparent;
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;    
+    border-radius: 30px;
+    font-weight: var(--bold);
+    color: var(--dgranite);
+    margin-top: 10px;
+    padding-top: 25px;
+    background-color: var(--platinum);
+  }
+  .logo::before{
+    content: "fn";
+  }
+  .home {
+    width: 100%;
+  }
+  .flex-container-icons {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .aboutme {
+    font-size: 14px;
+    padding: 0 30px;
+  }
+  .bigpicture {        
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-items {    
+    font-size: 14px;
+    font-weight: var(--regular);    
+  }  
+  .aboutme {
+    font-size: 14px;    
+  }
+  main {    
+    font-size: 14px;
+    font-weight: var(--regular);        
+  }  
+  .logo {
+    height: 60px;
+    width: 60px;
+    font-size: 40px;    
+    font-weight: var(--bold);
+    color: var(--dgranite);
+    padding-top: 17px;
+    background-color: var(--platinum);
+  }
+  .expandable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  .home {
+    width: 100%;
+  } 
+  .flex-container-icons {
+    width: 100%;
+  } 
+  /* .bigpicture {
+    visibility: hidden;
+  }   */
+}
+@media screen and (max-width: 400px) {
+  .menu-items {visibility: hidden;}      
+  .home {
+    width: 100%;
+  }      
 }

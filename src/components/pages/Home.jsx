@@ -1,10 +1,19 @@
+import {  motion } from 'framer-motion'
 export default function Home () {
   return (
     <>
-      <div className='home'>
-        <h1>Norman Teodoro</h1>
-        <h2>Full Stack Web Developer</h2>
-        <div className='flex-container-row'>
+  
+        <motion.div className='home' animate={{ opacity: [0, 1] }}>
+          <p className='aboutme'>
+            Hello, my name is Norman Teodoro. I am based in British Columbia,
+            Canada. I have been in the IT industry for quite a while. Recently,
+            I have been teaching myself to build websites. This is my website
+            and it's built using React. It's probably one of my favorite
+            languages to build apps. Reach out to me if you want to collaborate.{' '}
+          </p>
+          <p className='aboutme'>Here are some of the stuff I know :</p>
+        </motion.div>
+        <motion.div className='flex-container-icons' initial={{ x: '-100vw', opacity:0 }} animate={{ x: 0, opacity:1 }} transition={{ delay:0.5, duration: 0.8 }}>
           <a
             href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
             target='_blank'
@@ -13,12 +22,6 @@ export default function Home () {
             <img
               src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg'
               alt='Javascript'
-            />
-          </a>
-          <a href='https://www.python.org/' target='_blank' rel='noreferrer'>
-            <img
-              src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg'
-              alt='Python'
             />
           </a>
           <a
@@ -35,6 +38,18 @@ export default function Home () {
             <img
               src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg'
               alt='React'
+            />
+          </a>
+          <a href='https://nodejs.org/en/' target='_blank' rel='noreferrer'>
+            <img
+              src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg'
+              alt='NodeJS'
+            />
+          </a>
+          <a href='https://www.python.org/' target='_blank' rel='noreferrer'>
+            <img
+              src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg'
+              alt='Python'
             />
           </a>
           <a href='https://nextjs.org/docs' target='_blank' rel='noreferrer'>
@@ -57,12 +72,6 @@ export default function Home () {
             <img
               src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg'
               alt='Bootstrap'
-            />
-          </a>
-          <a href='https://nodejs.org/en/' target='_blank' rel='noreferrer'>
-            <img
-              src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg'
-              alt='NodeJS'
             />
           </a>
           <a href='https://expressjs.com/' target='_blank' rel='noreferrer'>
@@ -113,8 +122,10 @@ export default function Home () {
               alt='Django'
             />
           </a>
-        </div>
-      </div>
+        </motion.div>
+        <motion.div className='bigpicture' animate={{ opacity: [0, 0.25, 0.5, 0.75, 1] }}>
+          <img src='normanbwstanding2.png' alt='norman' />
+        </motion.div>
     </>
   )
 }
