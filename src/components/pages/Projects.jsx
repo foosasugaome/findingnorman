@@ -74,6 +74,8 @@ export default function Projects () {
 
         <div className="card-project">
         <h2>Projects</h2>
+        <p><small>Almost all my projects are in Github. You can view them below.</small></p>
+        <br />
         <ul>
           {listRepos}
         </ul>
