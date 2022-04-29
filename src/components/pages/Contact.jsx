@@ -69,6 +69,8 @@ export default function Contact () {
       </p>
       </div>
       </motion.div>
+      <div className='circle50'></div>
+        <div className='circle60'></div>
     </>
   )
 }

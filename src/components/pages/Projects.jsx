@@ -81,6 +81,8 @@ export default function Projects () {
         </ul>
         </div>
       </motion.div>
+      <div className='circle50'></div>
+        <div className='circle60'></div>
     </>
   )
 }

@@ -47,8 +47,8 @@ header {
   padding: 0 0 10px 0;  
 }
 main {
-  position: fixed;
-  top: 90px;
+  position: relative;
+  top: 80px;
   left: 50%;
   transform: translate(-50%, 0); 
   /* margin: 10px 10px 20px 10px; */
@@ -106,7 +106,8 @@ a:hover, a:focus {
   flex-direction: row;    
   width: 96%;  
   gap:20px;    
-  padding-left:10px;
+  padding: 10px 10px 0 10px;
+  background-color: rgba(255,255,255,0);
 }
 .flex-container-project::-webkit-scrollbar {
   display: none;
@@ -116,7 +117,7 @@ a:hover, a:focus {
   scrollbar-width: none;
 }
 .card-project {
-  width: 90%;
+  width:fit-content;
   box-shadow: 0 1px 8px 0 var(--manatee);  
   border-radius: 5px;
   padding: 0 5px 0px 10px;  
@@ -128,16 +129,16 @@ a:hover, a:focus {
   flex-direction: row;  
   flex-wrap: wrap;
   align-items: flex-start;  
-  align-content: flex-start;
-  /* padding: 0 20px 0 20px; */
+  align-content: flex-start;  
   width: 50%;
   max-width: 1000px;
   min-width: 400px; 
   height: 100%;
   margin-bottom: 200px;
+  background-color: rgba(255,255,255,0);
 }
 .flex-container-icons img {
-  width: 3vw;
+  width: 3vw;  
 }
 .flex-container-header {
   display: flex;
@@ -168,7 +169,7 @@ a:hover, a:focus {
   align-items: flex-end;
   color: var(--granite);
   background-color: var(--dgranite);
-  padding: 0 10px 0 0;  
+  padding: 0 40px 0 0;  
 }
 .menu-items a {
   text-decoration: none;
@@ -206,6 +207,7 @@ a:hover, a:focus {
   text-align: justify;
   padding: 0 10px 0 0;
   white-space: inherit;
+  background-color: rgba(255,255,255,0);
 }
 
 .github-card {
@@ -288,9 +290,10 @@ iframe {
 }
 .home {
   position: relative;  
-  z-index: 0;
+  z-index: 1;
   width: 60%;
   padding-left: 10px;  
+  background-color: rgba(255, 255, 255, 0);
 }
 .hello{
   font-size: 35px;
@@ -314,10 +317,31 @@ pre code {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0);
   margin-left: 5px;
+  z-index: 2;
 }
 .bigpicture img {
   width: 100%;
   background: transparent;
+}
+.circle50 {
+  position: absolute;  
+  bottom: -20%;  
+  right: 0%;
+  width: 60vw;
+  height: 40vw;
+  z-index: -1;
+  background-color: rgba(255, 128, 82, .5);
+  border-radius: 50vw;
+}
+.circle60{
+  position: absolute;  
+  top: -20%;  
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  z-index: -1;
+  background-color: rgba(240, 230, 140,.5);
+  border-radius: 50vw;
 }
 .forms{
   display: flex;
@@ -328,6 +352,7 @@ pre code {
   vertical-align: middle;
   width: 100vw;
   padding: 10px;  
+  background-color: rgba(255,255,255,0);
 }
 .form-container {
   border: 0.05rem solid var(--manatee);
@@ -368,7 +393,7 @@ input:focus {
   .flex-container-icons {
     justify-content:space-evenly;
     align-items: stretch;
-    width: 60%;
+    width: 50%;
     padding: 0 30px;
   }
   .aboutme {
@@ -386,6 +411,27 @@ input:focus {
   .card-project {
     font-size: 14px;    
   }
+  .circle50 {
+    position: absolute;  
+    bottom: -20%;  
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    z-index: -1;
+    background-color: rgba(255, 128, 82, .5);
+    border-radius: 50vw;
+  }
+  .circle60{
+    position: absolute;  
+    top: -20%;  
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    z-index: -1;
+    background-color: rgba(240, 230, 140,.5);
+    border-radius: 50vw;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -429,7 +475,7 @@ input:focus {
     width: 100%;
   } 
   .flex-container-icons {
-    width: 100%;
+    width: 50%;    
   } 
   .flex-container-project {       
     align-items: center;    
@@ -470,5 +516,28 @@ input:focus {
     flex-direction: column;
     align-content: center;
     align-items: center;
+  }
+  .hello {
+    font-size: 25px;
+  }
+  .circle50 {
+    position: absolute;  
+    bottom: -10%;  
+    right: -50%;
+    width: 100vw;
+    height: 100vw;
+    z-index: -1;
+    background-color: rgba(255, 128, 82, .5);
+    border-radius: 50vw;
+  }
+  .circle60{
+    position: absolute;  
+    top: 40vh;  
+    left: -20%;
+    width: 100vw;
+    height: 100vw;
+    z-index: -1;
+    background-color: rgba(240, 230, 140,.5);
+    border-radius: 50vw;
   }
 }
