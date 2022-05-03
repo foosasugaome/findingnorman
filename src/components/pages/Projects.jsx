@@ -32,7 +32,7 @@ export default function Projects () {
   })      
   return (
     <>
-      <motion.div initial={{ x: '100vw'}} animate={{ x:0 }} transition={{ type: 'spring', delay: 0, duration: 0.8}} className='flex-container-project'>        
+      <motion.div initial={{ x: '100vw'}} animate={{ x:20 }} transition={{ type: 'spring', delay: 0, duration: 0.8}} className='flex-container-project'>        
         {/* start of github card */}
         <a href={githubData.html_url} target='_blank' rel='noreferrer'>
         <div className='github-card center'>

@@ -2,7 +2,7 @@ import {  motion } from 'framer-motion'
 export default function Home () {
   return (
     <>
-        <motion.div initial={{ x: '100vw'}} animate={{ x:0 }} transition={{ type: 'spring', delay: 0, duration: 0.8}} className='home'>
+        <motion.div initial={{ x: '100vw'}} animate={{ x:20 }} transition={{ type: 'spring', delay: 0, duration: 0.8}} className='home'>
           <p className='aboutme'>
             Hello, my name is Norman Teodoro. I am based in British Columbia,
             Canada. I have been in the IT industry for quite a while. Recently,
@@ -10,7 +10,7 @@ export default function Home () {
           </p>
           <p className='aboutme'>Here are some of the stuff I know :</p>
         </motion.div>
-        <motion.div  initial={{ y: '-100vw' }} animate={{ y:0, opacity: [0,0.25, 0.5,0.75, 1] }} transition={{ type: 'spring', delay: 0, duration: 0.8 }} className='flex-container-icons'>
+        <motion.div  initial={{ y: '-100vw' }} animate={{x:20, y:0, opacity: [0,0.25, 0.5,0.75, 1] }} transition={{ type: 'spring', delay: 0, duration: 0.8 }} className='flex-container-icons'>
           <a
             href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
             target='_blank'
