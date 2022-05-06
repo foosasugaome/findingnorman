@@ -8,6 +8,7 @@ import Socials from './components/pages/Socials'
 import Resume from './components/pages/Resume'
 import Home from './components/pages/Home'
 import Contact from './components/pages/Contact'
+import Messages from './components/pages/Messages'
 
 export default function App () {
   const [ selectedComponent, setSelectedComponent ] = useState('0')
@@ -22,6 +23,7 @@ export default function App () {
             <Route path='/contact' element={<Contact />} />
             <Route path='/socials' element={<Socials />} />
             <Route path='/resume' element={<Resume />} />
+            <Route path='/messages' element={<Messages />} />
             
           </Routes>          
         </Layout>
