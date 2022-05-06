@@ -35,7 +35,7 @@ export default function Contact () {
         <div className='hello'>
         <h1><strong>Say hello!</strong></h1>
         </div>
-      <div className='form-container'>
+      <motion.div initial={{ x: '100vw'}} animate={{ x:20 }} transition={{ type: 'spring', delay: 0, duration: 0.8}} className='form-container'>
       <form onSubmit={submitForm}>
         <label htmlFor='name'></label>
         <input
@@ -67,7 +67,7 @@ export default function Contact () {
       <p>
         {JSON.stringify(serverMessage) ? serverMessage.msg : null}
       </p>
-      </div>
+      </motion.div>
       </motion.div>
       <div className='circle50'></div>
         <div className='circle60'></div>

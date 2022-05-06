@@ -331,17 +331,17 @@ pre code {
   height: 40vw;
   z-index: -1;
   background-color: rgba(255, 128, 82, .5);
-  border-radius: 50vw;
+  border-radius: 50vw 0vw 10vw 10vw;
 }
 .circle60{
   position: absolute;  
-  top: -20%;  
+  top: 0;  
   right: -10%;
   width: 50vw;
   height: 50vw;
   z-index: -1;
   background-color: rgba(240, 230, 140,.5);
-  border-radius: 50vw;
+  border-radius: 0vw 0vw 0vw 50vh;
 }
 .forms{
   display: flex;
@@ -359,13 +359,20 @@ pre code {
   padding: 100px;
   box-shadow: 1px 5px 5px -2px var(--manatee); 
   width:fit-content;
-  /* min-width: 250px;   */  
-  max-width: 600px;
+  width: 40vw;
+  min-width: 250px;    
+  /* max-width: 600px; */
   display: flex;
   justify-content:space-evenly;
   align-items:baseline;  
+  align-content: center;
   flex-direction: column;    
   gap: 10px;
+  
+}
+.form-container input, textarea, button {
+  width: 100%;
+  font-size: 30px;
 }
 input, textarea, label, button {  
   border: 0.05rem solid var(--manatee);
