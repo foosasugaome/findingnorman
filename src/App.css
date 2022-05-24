@@ -353,6 +353,8 @@ pre code {
   width: 100vw;
   padding: 10px;  
   background-color: rgba(255,255,255,0);
+  position: absolute;
+  top: 25%;
 }
 .form-container {
   border: 0.05rem solid var(--manatee);
@@ -546,5 +548,10 @@ input:focus {
     z-index: -1;
     background-color: rgba(240, 230, 140,.5);
     border-radius: 50vw;
+  }
+}
+@media screen and (max-height: 725px) {
+  .bigpicture {
+    visibility: hidden;
   }
 }
