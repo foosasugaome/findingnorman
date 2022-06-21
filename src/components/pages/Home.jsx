@@ -120,9 +120,9 @@ export default function Home () {
             />
           </a>
         </motion.div>
-        <motion.div className='bigpicture' initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.9 }}>
+        {/* <motion.div className='bigpicture' initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.9 }}>
           <img src='normanbwstanding2.png' alt='norman' />
-        </motion.div>
+        </motion.div> */}
         <div className='circle50'></div>
         <div className='circle60'></div>
     </>
