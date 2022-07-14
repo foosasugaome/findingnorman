@@ -23,8 +23,7 @@ export default function App () {
             <Route path='/contact' element={<Contact />} />
             <Route path='/socials' element={<Socials />} />
             <Route path='/resume' element={<Resume />} />
-            <Route path='/messages' element={<Messages />} />
-            
+            <Route path='/messages' element={<Messages />} />            
           </Routes>          
         </Layout>
       </BrowserRouter>
