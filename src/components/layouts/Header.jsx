@@ -15,7 +15,7 @@ export default function Header () {
             <Link to='/'>about</Link> 
             <Link to='/projects'>projects</Link>
             {/* <Link to='/socials'>socials</Link>  */}
-            <Link to='/contact'>contact</Link>
+            {/* <Link to='/contact'>contact</Link> */}
             {/* <a href='mailto:normanteodoro@hotmail.com'>contact</a> */}
             <a href='Norman_Teodoro.pdf' target='_blank' rel='noreferrer' >résumé</a>
             {/* <Link to='/resume'>résumé</Link> */}            
